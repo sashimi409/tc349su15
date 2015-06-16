@@ -3,6 +3,9 @@
 <script src="jquery.js"></script>
 <link href="/normalize.css" rel="stylesheet">
 <style>
+section{
+position: relative;
+}
 body {
 	background-color: #F5F5DC;
 }
@@ -52,7 +55,32 @@ border-radius: 12px;
 	width:960px;
 	margin: 0 auto;
 }
+.details {
+display:none;
+}
 
+a {
+	border: 0;
+	display:none;
+	bottom: 0;
+	margin: 12px auto 12px auto;
+	
+	width: 290;
+
+}
+/*
+This is for the class overriding with on click. Will hide one set of paragraphs, and show new ones. as well as color changes. and show a button.
+*/
+
+.Click .initial {
+display: none;
+}
+.Click .details{
+display: inline;
+}
+.Click a{
+	display:block;
+}
 </style>
 </head>
 <body>
@@ -62,17 +90,23 @@ border-radius: 12px;
 <div id="Panes">
 <section id="First">
 		<h2>Brand new to the Game</h2>
-		<p>So you have just picked up the game of go. Click here if you are just starting out and think you need help with the very basics.</p>
+		<p class="initial">So you have just picked up the game of go. Click here if you are just starting out and think you need help with the very basics.</p>
+		<p class="details"> More details would go here.</p> <br />
+		<a>Link</a>
 	</section>
 	
-	<section id="Second">
+	<section id="Second" >
 		<h2>High Kyu plaers</h2>
-		<p>You have no started to learnt he game. Click here if you have a grasp on the game but dont know where to start improving.</p>
+		<p class="initial">You have no started to learnt he game. Click here if you have a grasp on the game but dont know where to start improving.</p>
+		<p class="details"> More details would go here.</p>
+		<a>Link</a>
 	</section>
 
 	<section id="Third">
 		<h2>Low Kyu Players</h2>
-		<p>Now that you know more about the game you should have a much better idea on where to improve your game. Click here if you have an idea of where you want to start.
+		<p class="initial">Now that you know more about the game you should have a much better idea on where to improve your game. Click here if you have an idea of where you want to start.</p>
+		<p class="details"> More details would go here.</p>
+		<a>Link</a>
 </div>
-<script>$('div').on('click', function(){alert("You clicked something");});</script>
+<script>$('section').on('click', function(){$(this).toggleClass('Click');});</script>
 	</body>
