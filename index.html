@@ -1,35 +1,24 @@
 <!DOCTYPE html>
 <head>
 <script src="jquery.js"></script>
-<link href="/normalize.css" rel="stylesheet">
 <style>
-section{
-position: relative;
+
+img {
+	display: block;
+	margin: 0 auto 15px auto;
 }
+
 body {
-	background-color: #F5F5DC;
+	margin: 0 auto;
+	background: #000;
 }
-header {
-	background-color: #C7C683;
-	height: 200px;
-	width: 1000px;
-	margin: 0 auto 20px auto;
-	padding: 0;
-	border-radius: 12px;
-}
-h1 {
-	font-size: 100px;
-	color: #444444;
-	text-align: center;
-	padding: 50px;
-	margin: 0;
-}
+
 #First {
-border-radius: 12px;
+	border-radius: 12px;
 	width: 290px;
 	float: left;
 	padding: 5px 15px;
-	background: green;
+	background: #75613C;
 	min-height: 300px;
 }
 
@@ -39,7 +28,7 @@ border-radius: 12px;
 	float: left;
 	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
-	background: pink;
+	background: #75613C;
 	min-height: 300px;
 }
 
@@ -48,26 +37,69 @@ border-radius: 12px;
 	width: 270px;
 	padding: 5px 15px;
 	float: left;
-	background:orange;
+	background:#75613C;
 	min-height: 300px;
 }
+
 #Panes {
 	width:960px;
+	height: 300px;
 	margin: 0 auto;
 }
+
+div#Container {
+	width: 1000px;
+	margin: 0 auto;
+	background: #AB8D57;
+}
+
 .details {
 display:none;
 }
 
-a {
+h2 {
+	color: #FAE9BD;
+}
+p {
+	color: #FAE9BD;
+}
+#footer {
+	clear: float;
+	display: block;
+   margin-right: 50px;
+   height:30px;
+   width:960px;
+   background:#AB8D57;
+   text-align: right;
+}
+
+a:link {
 	border: 0;
-	display:none;
+	display: none;
 	bottom: 0;
 	margin: 12px auto 12px auto;
-	
+	color: #FAE9BD;
 	width: 290;
 
 }
+
+a:visited {
+	color: #FAE9BD;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+header a:link {
+	display: block;
+	margin: 0;
+}
+#footer p {
+	color: #000;
+}
+
 /*
 This is for the class overriding with on click. Will hide one set of paragraphs, and show new ones. as well as color changes. and show a button.
 */
@@ -79,34 +111,41 @@ display: none;
 display: inline;
 }
 .Click a{
-	display:block;
+	display: block;
 }
 </style>
 </head>
 <body>
+<div id="Container">
 <header>
-<h1> The game of Go </h1>
+<a href="index.html"><img src="Header.jpg"></img></a>
 </header>
 <div id="Panes">
 <section id="First">
 		<h2>Brand new to the Game</h2>
-		<p class="initial">So you have just picked up the game of go. Click here if you are just starting out and think you need help with the very basics.</p>
-		<p class="details"> More details would go here.</p> <br />
-		<a>Link</a>
+		<p class="initial">So you have just picked up the game of go. Congrats and welcome!</br> </br>Click this box if you are just starting out and think you need help with the very basics.</p>
+		<p class="details"> Things to learn: </br></br>Basic rules</br>How to end a game</p> <br />
+		<a href="Start.html">More Info</a>
 	</section>
 	
 	<section id="Second" >
-		<h2>High Kyu plaers</h2>
-		<p class="initial">You have no started to learnt he game. Click here if you have a grasp on the game but dont know where to start improving.</p>
-		<p class="details"> More details would go here.</p>
-		<a>Link</a>
+		<h2>High Kyu players</h2>
+		<p class="initial">You have not started to study the game. The basics let you play but more studying helps you win. </br> </br>Click this box if you have a grasp on the game but don't know where to start improving.</p>
+		<p class="details">Things to learn: </br></br>Liberties</br>Go problems</br>Reading skills</p>
+		<a href="High.html">More Info</a>
 	</section>
 
 	<section id="Third">
 		<h2>Low Kyu Players</h2>
-		<p class="initial">Now that you know more about the game you should have a much better idea on where to improve your game. Click here if you have an idea of where you want to start.</p>
-		<p class="details"> More details would go here.</p>
-		<a>Link</a>
+		<p class="initial">Now that you know more about the game you should have a much better idea on where to improve your game.</br> </br>Click this box if you have an idea of where you want to start.</p>
+		<p class="details">Things to learn: </br></br> Joseki</br>Fuseki</p>
+		<a href="Low.html">More Info</a>
+	</section>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<p>Contact | About </p>
+</div>
 </div>
 <script>$('section').on('click', function(){$(this).toggleClass('Click');});</script>
-	</body>
+</body>
